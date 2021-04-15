@@ -1,4 +1,4 @@
-// var cards = document.querySelectorAll(".memory-card");
+var cards = document.querySelectorAll(".memory-card");
 
 function flipCard(card) {
     card.classList.toggle("flip");
@@ -24,3 +24,36 @@ function play() {
     })
 }
 $(document).ready(play)
+
+function schuffle() {
+    cards.forEach(card=>{
+        var random = Math.floor(Math.random()*12)
+        card.style.order = random;
+    })
+}
+schuffle()
+
+// function play() {
+//     var audio = document.getElementById("audio");
+//     audio.play();
+// }
+// play()
+
+// var button = document.createElement("button");
+// button.innerHTML = "Restart";
+// var body = document.getElementsByTagName("body");
+// body.append(button);
+// button.addEventListener ("click", function() {
+//     location.reload();
+// });
+
+// $(function(){
+//     $("button").on("click",function(){
+//         var r= $('<input type="button" id="reload"/>');
+//         $("body").append(r);
+//     });
+// });
+
+
+
+    
