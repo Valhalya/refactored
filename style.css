@@ -3,7 +3,15 @@
     margin: 0;
     box-sizing: border-box;
   }
-  
+  h1{
+    color: antiquewhite;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #c933d770;
+    padding: 50px 30px 50px 30px;
+  }
   body {
     height: 100vh;
     display: flex;
@@ -19,6 +27,7 @@
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
+    margin-left: -5%;
   }
   
   .memory-card {

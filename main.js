@@ -33,14 +33,13 @@ function schuffle() {
 }
 schuffle()
 
-// function play() {
-//     var audio = document.getElementById("audio");
-//     audio.play();
-// }
-// play()
+function playAudio() {
+    var audio = document.getElementById("audio");
+    audio.play();
+}
 
 // var button = document.createElement("button");
-// button.innerHTML = "Restart";
+// button.innerHTML = "Play Again";
 // var body = document.getElementsByTagName("body");
 // body.append(button);
 // button.addEventListener ("click", function() {
@@ -49,11 +48,14 @@ schuffle()
 
 // $(function(){
 //     $("button").on("click",function(){
-//         var r= $('<input type="button" id="reload"/>');
-//         $("body").append(r);
+//         var b= $('<button id="but">Play Again</button>');
+//         $("body").append(b);
 //     });
 // });
 
-
+function playMusic() {
+    document.getElementById("music").play();
+}
+playMusic()
 
     
