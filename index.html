@@ -5,71 +5,74 @@
   <title>Memory Game</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="display">
 		<div id="scorediv">
-		<p id="score"></p>
+		<p id="score">Click</p>
 	</div>
 	<div id="Timer">
-		<p id="TimerDisplay"></p>
+		<p id="TimerDisplay">Time</p>
 	</div>
+  <button id="start" onclick="start()">Start Game</button>
+  <button id="reload" onclick="reload()">Play Again</button>
 	</div>
-	
   <section class="memory-game">
-
-    <div class="memory-card" name="sab3a l7aya" onclick="playmusic();count()">
+    <div class="memory-card" name="sab3a l7aya" onclick="playAudio();count()">
       <img class="front-face" src="MG pictures/Chkobba_carreau_07.svg.png" name="sab3a l7aya"/>
       <img class="back-face" src="MG pictures/Chkobba_point.svg.jpg"/>
     </div>
-    <div class="memory-card" name="ray" onclick="playmusic();count()">
+    <div class="memory-card" name="ray" onclick="playAudio();count()">
         <img class="front-face" src="MG pictures/1200px-Chkobba_carreau_10.svg.png" name="ray"/>
 		<img class="back-face" src="MG pictures/Chkobba_point.svg.jpg"/>
-
     </div>
-    <div class="memory-card" name="moujira" onclick="playmusic();count()">
+    <div class="memory-card" name="moujira" onclick="playAudio();count()">
       <img class="front-face" src="MG pictures/Chkobba_carreau_08.svg.png" name="moujira"/>
       <img class="back-face" src="MG pictures/Chkobba_point.svg.jpg"/>
     </div>
-    <div class="memory-card" name="ray" onclick="playmusic();count()">
+    <div class="memory-card" name="ray" onclick="playAudio();count()">
       <img class="front-face" src="MG pictures/1200px-Chkobba_carreau_10.svg.png" name="ray"/>
       <img class="back-face" src="MG pictures/Chkobba_point.svg.jpg"/>
     </div>
-    <div class="memory-card" name="sab3a l7aya" onclick="playmusic();count()">
+    <div class="memory-card" name="sab3a l7aya" onclick="playAudio();count()">
       <img class="front-face" src="MG pictures/Chkobba_carreau_07.svg.png" name="sab3a l7aya"/>
       <img class="back-face" src="MG pictures/Chkobba_point.svg.jpg"/>
     </div>
-    <div class="memory-card" name="libnina" onclick="playmusic();count()">
+    <div class="memory-card" name="libnina" onclick="playAudio();count()">
       <img class="front-face" src="MG pictures/Chkobba_pique_06.svg.png" name="libnina"/>
       <img class="back-face" src="MG pictures/Chkobba_point.svg.jpg"/>
     </div>
-    <div class="memory-card" name="lass" onclick="playmusic();count()">
+    <div class="memory-card" name="lass" onclick="playAudio();count()">
       <img class="front-face" src="MG pictures/Chkobba_carreau_01.svg.png" name="lass"/>
       <img class="back-face" src="MG pictures/Chkobba_point.svg.jpg"/>
     </div>
-    <div class="memory-card" name="kawel" onclick="playmusic();count()">
+    <div class="memory-card" name="kawel" onclick="playAudio();count()">
       <img class="front-face" src="MG pictures/Chkobba_carreau_09.svg.png" name="kawel"/>
       <img class="back-face" src="MG pictures/Chkobba_point.svg.jpg"/>
     </div>
-    <div class="memory-card" name="lass" onclick="playmusic();count()">
+    <div class="memory-card" name="lass" onclick="playAudio();count()">
       <img class="front-face" src="MG pictures/Chkobba_carreau_01.svg.png" name="lass"/>
       <img class="back-face" src="MG pictures/Chkobba_point.svg.jpg"/>
     </div>
-    <div class="memory-card" name="libnina" onclick="playmusic();count()">
+    <div class="memory-card" name="libnina" onclick="playAudio();count()">
       <img class="front-face" src="MG pictures/Chkobba_pique_06.svg.png" name="libnina"/>
       <img class="back-face" src="MG pictures/Chkobba_point.svg.jpg"/>
     </div>
-    <div class="memory-card" name="kawel" name="kawel" onclick="playmusic();count()">
+    <div class="memory-card" name="kawel" name="kawel" onclick="playAudio();count()">
       <img class="front-face" src="MG pictures/Chkobba_carreau_09.svg.png" name="kawel"/>
       <img class="back-face" src="MG pictures/Chkobba_point.svg.jpg"/>
     </div>
-    <div class="memory-card" name="moujira" onclick="playmusic();count()">
+    <div class="memory-card" name="moujira" onclick="playAudio();count()">
       <img class="front-face" src="MG pictures/Chkobba_carreau_08.svg.png" name="moujira"/>
       <img class="back-face" src="MG pictures/Chkobba_point.svg.jpg"/>
     </div>
   </section>
-  <audio id="Musica" src="Card-flip-sound-effect.mp3"></audio> 
-  
+  <audio id="audio" src="Card-flip-sound-effect.mp3"></audio>
+  <audio id="newSong"></audio> 
+  <source id="mp3_src" src="win31.mp3" type="audio/mp3"/>
+  <audio id="clip" src="congratulation.mp3"></audio>
   <script src="main.js"></script>
 </body>
 </html>
