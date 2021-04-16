@@ -16,7 +16,7 @@ function play() {
             firstCard = null;
             counter=counter-1;
             county=county+1;
-            change(sourceUrl);
+            //change(sourceUrl);
         } else if (!firstCard) {
             firstCard = this
         } else {
