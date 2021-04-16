@@ -5,25 +5,38 @@ function flipCard(card) {
 }
 
 // cards.forEach(card =>card.addEventListener("click", flipCard));
-
+var counter=1;
+var county=0;  
+var firstCard = null
 function play() {
-    var firstCard = null
     $(".memory-card").on("click", function () {
         flipCard(this)
+        counter++;
         if ($(firstCard).attr('name') === $(this).attr('name')) {
-            firstCard = null
+            firstCard = null;
+            counter=counter-1;
+            county=county+1;
         } else if (!firstCard) {
             firstCard = this
         } else {
             setTimeout(() => {
-                flipCard(firstCard)
+                flipCard( firstCard)
                 firstCard = null
                 flipCard(this)
             }, 500);
         }
+        if(county==6){
+        counter=0;
+        county=0;
+        }
     })
 }
 $(document).ready(play)
+function count(){
+    var score=document.getElementById('score');
+    score.innerHTML="";
+    score.append(counter)
+}
 
 function schuffle() {
     cards.forEach(card=>{
@@ -32,6 +45,24 @@ function schuffle() {
     })
 }
 schuffle()
+
+
+var soundy=document.getElementById('Musica')
+function playmusic(){
+    soundy.play();
+}
+function timer(){
+    var sec = 60;
+    var timer = setInterval(function(){
+        document.getElementById('TimerDisplay').innerHTML=sec;
+        sec--;
+        if (sec < 0) {
+            clearInterval(timer);
+        }
+    }, 1000);
+};
+timer();
+
 
 // function play() {
 //     var audio = document.getElementById("audio");
